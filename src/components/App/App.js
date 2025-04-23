@@ -6,18 +6,22 @@ import Content from '../Content/Content';
 import { render } from '@testing-library/react';
 import LeftContent from '../Content/LeftContent';
 import RightContent from '../Content/RightContent';
+import Member from '../Content/Member';
+import Counter_funtion from '../Content/Counter_funtion';
+import Dientich_hcn from '../Content/Dientich_hcn';
 
 function App() {
     // const NewComponent = () => {}
         return (
     
           <div id="container">
-            <Header/>
-            {/* this is content area */}
+            {/* <Header/>
             <LeftContent/>
             <RightContent/>
-            {/* footer content */}
-            <Footer/>
+            <Footer/> */}
+            {/* <Member/> */}
+            {/* < Counter_funtion/> */}
+            <Dientich_hcn/>
             
           </div>
         );
