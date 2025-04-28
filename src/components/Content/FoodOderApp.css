@@ -1,0 +1,85 @@
+/* FoodOrderApp.css */
+
+.container_menu {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff9f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    text-align: center;
+    color: #e67300;
+    margin-bottom: 20px;
+  }
+  
+  .menu {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .menu-item:hover {
+    background-color: #ffe6cc;
+  }
+  
+  .menu-item input {
+    margin-right: 10px;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #cc6600;
+  }
+  
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input-section input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-section button {
+    padding: 10px;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .input-section button:hover {
+    background-color: #e67300;
+  }
+  
+  .result {
+    background-color: #fff3e0;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .result h3 {
+    margin-top: 0;
+  }
+  

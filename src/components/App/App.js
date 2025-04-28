@@ -9,6 +9,11 @@ import RightContent from '../Content/RightContent';
 import Member from '../Content/Member';
 import Counter_funtion from '../Content/Counter_funtion';
 import Dientich_hcn from '../Content/Dientich_hcn';
+import FromBasic from '../Content/FromBasic';
+import FormXLoai from '../Content/FormXLoai';
+import ShowFashion from '../Content/ShowFashion';
+import AddProduct from '../Content/AddProduct';
+import FoodOrderApp from '../Content/FoodOderApp';
 
 function App() {
     // const NewComponent = () => {}
@@ -21,7 +26,11 @@ function App() {
             <Footer/> */}
             {/* <Member/> */}
             {/* < Counter_funtion/> */}
-            <Dientich_hcn/>
+            {/* <Dientich_hcn/> */}
+            {/* <FromBasic/> */}
+            {/* <FormXLoai/> */}
+            {/* <AddProduct/> */}
+            <FoodOrderApp/>
             
           </div>
         );
