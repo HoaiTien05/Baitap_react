@@ -25,20 +25,20 @@ class AddProduct extends Component {
         this.toggleModal = this.toggleModal.bind(this);
     }
 
-    handleChange(event) {
-        const name = event.target.name;
-        let value = event.target.value;
+    // handleChange(event) {
+    //     const name = event.target.name;
+    //     let value = event.target.value;
 
-        if (name === "image") {
-            const file = document.getElementById("image").files.item(0);
-            if (file) {
-                value = "images/" + file.name;
-            }
-        }
+    //     if (name === "image") {
+    //         const file = document.getElementById("image").files.item(0);
+    //         if (file) {
+    //             value = "images/" + file.name;
+    //         }
+    //     }
 
-        this.setState({ [name]: value });
-        event.preventDefault();
-    }
+    //     this.setState({ [name]: value });
+    //     event.preventDefault();
+    // }
 
     saveProducts(products) {
         sessionStorage.setItem("products", JSON.stringify(products));

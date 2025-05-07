@@ -1,39 +1,62 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer';
-import Content from '../Content/Content';
-import { render } from '@testing-library/react';
-import LeftContent from '../Content/LeftContent';
-import RightContent from '../Content/RightContent';
-import Member from '../Content/Member';
-import Counter_funtion from '../Content/Counter_funtion';
-import Dientich_hcn from '../Content/Dientich_hcn';
-import FromBasic from '../Content/FromBasic';
-import FormXLoai from '../Content/FormXLoai';
-import ShowFashion from '../Content/ShowFashion';
-import AddProduct from '../Content/AddProduct';
-import FoodOrderApp from '../Content/FoodOderApp';
+import routes from '../routes';
+
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 function App() {
-    // const NewComponent = () => {}
-        return (
-    
-          <div id="container">
-            {/* <Header/>
-            <LeftContent/>
-            <RightContent/>
-            <Footer/> */}
-            {/* <Member/> */}
-            {/* < Counter_funtion/> */}
-            {/* <Dientich_hcn/> */}
-            {/* <FromBasic/> */}
-            {/* <FormXLoai/> */}
-            {/* <AddProduct/> */}
-            <FoodOrderApp/>
-            
-          </div>
-        );
-      }
+  const showContentMenu = (routes) => {
+    if (routes.length === 0) return null;
+
+    return routes.map((route, index) => (
+      <Route 
+        key={index} 
+        path={route.path} 
+        element={route.element} 
+      />
+    ));
+  };
+
+  return (
+    <BrowserRouter>
+      <div style={{ margin: '20px' }}>
+        <h2>Welcome to React Router Tutorial</h2>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <ul className="navbar-nav">
+            <li>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} 
+                end
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/contact" 
+                className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+              >
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/about" 
+                className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+              >
+                About
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <Routes>
+          {showContentMenu(routes)}
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+}
 
 export default App;
